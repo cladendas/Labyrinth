@@ -8,6 +8,6 @@
 
 import Foundation
 
-class Graal: Things {
+struct Graal: Things {
     var name = "Graal"
 }

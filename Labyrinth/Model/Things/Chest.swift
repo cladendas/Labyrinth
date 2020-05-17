@@ -8,6 +8,7 @@
 
 import Foundation
 
-class Chest {
+class Chest: Things {
+    var name: String = "Chest"
     var things: [Things] = []
 }

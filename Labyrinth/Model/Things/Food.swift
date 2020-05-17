@@ -8,6 +8,6 @@
 
 import Foundation
 
-class Food: Things {
+struct Food: Things {
     var name = "Food"
 }

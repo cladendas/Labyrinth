@@ -8,6 +8,6 @@
 
 import Foundation
 
-class Torch: Things {
+struct Torch: Things {
     var name = "Torch"
 }

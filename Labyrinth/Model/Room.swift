@@ -9,5 +9,7 @@
 import Foundation
 
 class Room {
-    
+    var things: [Things] = []
+    var doors: [Door] = []
+    var coordinate = [0, 0]
 }
