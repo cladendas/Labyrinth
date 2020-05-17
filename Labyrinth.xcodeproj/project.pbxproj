@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A6E1B8124714374007CF2EE /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E1B7524714374007CF2EE /* Room.swift */; };
+		6A6E1B8224714374007CF2EE /* Things.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E1B7724714374007CF2EE /* Things.swift */; };
+		6A6E1B8324714374007CF2EE /* Graal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E1B7824714374007CF2EE /* Graal.swift */; };
+		6A6E1B8424714374007CF2EE /* Torch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E1B7924714374007CF2EE /* Torch.swift */; };
+		6A6E1B8524714374007CF2EE /* Sword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E1B7A24714374007CF2EE /* Sword.swift */; };
+		6A6E1B8624714374007CF2EE /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E1B7B24714374007CF2EE /* Key.swift */; };
+		6A6E1B8724714374007CF2EE /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E1B7C24714374007CF2EE /* Food.swift */; };
+		6A6E1B8824714374007CF2EE /* Chest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E1B7D24714374007CF2EE /* Chest.swift */; };
+		6A6E1B8924714374007CF2EE /* Door.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E1B7E24714374007CF2EE /* Door.swift */; };
+		6A6E1B8A24714374007CF2EE /* Gamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E1B7F24714374007CF2EE /* Gamer.swift */; };
+		6A6E1B8B24714374007CF2EE /* Labyrinth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E1B8024714374007CF2EE /* Labyrinth.swift */; };
 		6AEF6C3224713DF3003FCA1F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEF6C3124713DF3003FCA1F /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +34,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6A6E1B7524714374007CF2EE /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		6A6E1B7724714374007CF2EE /* Things.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Things.swift; sourceTree = "<group>"; };
+		6A6E1B7824714374007CF2EE /* Graal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graal.swift; sourceTree = "<group>"; };
+		6A6E1B7924714374007CF2EE /* Torch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Torch.swift; sourceTree = "<group>"; };
+		6A6E1B7A24714374007CF2EE /* Sword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sword.swift; sourceTree = "<group>"; };
+		6A6E1B7B24714374007CF2EE /* Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		6A6E1B7C24714374007CF2EE /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		6A6E1B7D24714374007CF2EE /* Chest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chest.swift; sourceTree = "<group>"; };
+		6A6E1B7E24714374007CF2EE /* Door.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Door.swift; sourceTree = "<group>"; };
+		6A6E1B7F24714374007CF2EE /* Gamer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gamer.swift; sourceTree = "<group>"; };
+		6A6E1B8024714374007CF2EE /* Labyrinth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Labyrinth.swift; sourceTree = "<group>"; };
 		6AEF6C2E24713DF3003FCA1F /* Labyrinth */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Labyrinth; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AEF6C3124713DF3003FCA1F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,6 +60,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A6E1B7424714374007CF2EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6A6E1B7624714374007CF2EE /* Things */,
+				6A6E1B7524714374007CF2EE /* Room.swift */,
+				6A6E1B7D24714374007CF2EE /* Chest.swift */,
+				6A6E1B7E24714374007CF2EE /* Door.swift */,
+				6A6E1B7F24714374007CF2EE /* Gamer.swift */,
+				6A6E1B8024714374007CF2EE /* Labyrinth.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6A6E1B7624714374007CF2EE /* Things */ = {
+			isa = PBXGroup;
+			children = (
+				6A6E1B7724714374007CF2EE /* Things.swift */,
+				6A6E1B7824714374007CF2EE /* Graal.swift */,
+				6A6E1B7924714374007CF2EE /* Torch.swift */,
+				6A6E1B7A24714374007CF2EE /* Sword.swift */,
+				6A6E1B7B24714374007CF2EE /* Key.swift */,
+				6A6E1B7C24714374007CF2EE /* Food.swift */,
+			);
+			path = Things;
+			sourceTree = "<group>";
+		};
 		6AEF6C2524713DF3003FCA1F = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +105,7 @@
 		6AEF6C3024713DF3003FCA1F /* Labyrinth */ = {
 			isa = PBXGroup;
 			children = (
+				6A6E1B7424714374007CF2EE /* Model */,
 				6AEF6C3124713DF3003FCA1F /* main.swift */,
 			);
 			path = Labyrinth;
@@ -120,7 +169,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A6E1B8624714374007CF2EE /* Key.swift in Sources */,
+				6A6E1B8124714374007CF2EE /* Room.swift in Sources */,
+				6A6E1B8424714374007CF2EE /* Torch.swift in Sources */,
+				6A6E1B8A24714374007CF2EE /* Gamer.swift in Sources */,
+				6A6E1B8924714374007CF2EE /* Door.swift in Sources */,
+				6A6E1B8324714374007CF2EE /* Graal.swift in Sources */,
+				6A6E1B8224714374007CF2EE /* Things.swift in Sources */,
+				6A6E1B8B24714374007CF2EE /* Labyrinth.swift in Sources */,
+				6A6E1B8724714374007CF2EE /* Food.swift in Sources */,
+				6A6E1B8824714374007CF2EE /* Chest.swift in Sources */,
 				6AEF6C3224713DF3003FCA1F /* main.swift in Sources */,
+				6A6E1B8524714374007CF2EE /* Sword.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,12 +1,13 @@
 //
-//  main.swift
+//  Room.swift
 //  Labyrinth
 //
-//  Created by cladendas on 17.05.2020.
+//  Created by cladendas on 16.05.2020.
 //  Copyright © 2020 cladendas. All rights reserved.
 //
 
 import Foundation
 
-
-
+class Room {
+    
+}
