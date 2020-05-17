@@ -12,16 +12,16 @@ import Foundation
 class Check {
     
     ///Проверка, что пользователь ввёл целое положительное целое число
-    func checkNumberOfRooms(number: String) {
+    func checkNumberOfRooms(number: String) -> Int{
         
-        let tmpNumber = Int(number)
-        
-        switch tmpNumber {
-            case _ as Int where tmpNumber! > 0:
+        if let tmpNumber = Int(number) {
+            if tmpNumber > 0 {
                 print("Урааа!!!")
-        default:
-            print("Необходимо ввести целое положительное число")
+                return tmpNumber
+            }
         }
+        print("Необходимо ввести целое положительное число")
+        return 0
     }
     
     func checkName(name: String) -> String {

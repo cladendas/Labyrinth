@@ -16,5 +16,5 @@ enum Way: String {
 }
 
 struct Door {
-
+    var name: Way
 }
