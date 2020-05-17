@@ -10,14 +10,22 @@ import Foundation
 
 var welcome = "Welcome to Labyrinth!"
 var enterName = "Enter your name..."
-var enterNumbersOfRooms = "Enter numbers of rooms..."
+var enterNumberOfRooms = "! Enter numbers of rooms..."
 var noName = "adventurer" //используется, если игрок не введёт имя
+var errorEnterNumer = "Необходимо ввести целое положительное число"
+
+var check = Check()
 
 print(welcome)
 print(enterName)
 
 var name = readLine()
 
-print(name == "" ? "\(noName)!" : "\(name!)!", enterNumbersOfRooms)
+print(check.checkName(name: name ?? ""), enterNumberOfRooms)
 
-var numbersOfRooms = readLine()
+var numberOfRooms = readLine()
+
+check.checkNumberOfRooms(number: numberOfRooms ?? "0")
+
+var creatorLabyrinth = CreatorLabyrinth()
+creatorLabyrinth.build(numberOfRooms: 2)

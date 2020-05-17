@@ -19,6 +19,7 @@
 		6A6E1B8A24714374007CF2EE /* Gamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E1B7F24714374007CF2EE /* Gamer.swift */; };
 		6A6E1B8B24714374007CF2EE /* Labyrinth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E1B8024714374007CF2EE /* Labyrinth.swift */; };
 		6A6E1B8F24714E9E007CF2EE /* CreatorLabyrinth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E1B8E24714E9E007CF2EE /* CreatorLabyrinth.swift */; };
+		6A6E1B9124715527007CF2EE /* Check.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6E1B9024715527007CF2EE /* Check.swift */; };
 		6AEF6C3224713DF3003FCA1F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEF6C3124713DF3003FCA1F /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		6A6E1B7F24714374007CF2EE /* Gamer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gamer.swift; sourceTree = "<group>"; };
 		6A6E1B8024714374007CF2EE /* Labyrinth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Labyrinth.swift; sourceTree = "<group>"; };
 		6A6E1B8E24714E9E007CF2EE /* CreatorLabyrinth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorLabyrinth.swift; sourceTree = "<group>"; };
+		6A6E1B9024715527007CF2EE /* Check.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Check.swift; sourceTree = "<group>"; };
 		6AEF6C2E24713DF3003FCA1F /* Labyrinth */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Labyrinth; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AEF6C3124713DF3003FCA1F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				6A6E1B8E24714E9E007CF2EE /* CreatorLabyrinth.swift */,
+				6A6E1B9024715527007CF2EE /* Check.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A6E1B9124715527007CF2EE /* Check.swift in Sources */,
 				6A6E1B8624714374007CF2EE /* Key.swift in Sources */,
 				6A6E1B8124714374007CF2EE /* Room.swift in Sources */,
 				6A6E1B8F24714E9E007CF2EE /* CreatorLabyrinth.swift in Sources */,

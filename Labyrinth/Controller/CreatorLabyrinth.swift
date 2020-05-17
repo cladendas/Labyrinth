@@ -9,5 +9,22 @@
 import Foundation
 
 class CreatorLabyrinth {
-    var numberOfRooms: Int = 0
+    
+    func build(numberOfRooms: Int) {
+        var Xmax: Int {
+            numberOfRooms / 2 - 1
+        }
+        
+        var Ymax: Int {
+            numberOfRooms % Xmax - 1
+        }
+        
+        var length: Int {
+            numberOfRooms / 2
+        }
+        
+        var heigth: Int {
+            numberOfRooms / Xmax + numberOfRooms % Xmax
+        }
+    }
 }
