@@ -27,3 +27,7 @@ var numberOfRooms = check.checkNumberOfRooms(number: tmpNumberOfRooms ?? "")
 
 var creatorLabyrinth = CreatorLabyrinth()
 creatorLabyrinth.build(numberOfRooms: numberOfRooms)
+
+creatorLabyrinth.rooms.forEach { (room) in
+    print(room.things)
+}

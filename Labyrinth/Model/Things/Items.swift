@@ -9,6 +9,6 @@
 import Foundation
 
 ///Протокол
-protocol Things {
+protocol Items {
     var name: String { get }
 }

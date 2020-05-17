@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Chest: Things {
-    var name: String = "Chest"
-    var things: [Things] = []
+struct Chest: Items {
+    var name = "Chest"
+    var things: [Items] = []
 }

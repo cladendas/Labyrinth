@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Way: String {
+enum Directions: String {
     case N
     case S
     case W
@@ -16,5 +16,5 @@ enum Way: String {
 }
 
 struct Door {
-    var name: Way
+    var name: Directions
 }

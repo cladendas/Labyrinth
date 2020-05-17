@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+///!!! проработать, когда указано 1, 2, 3 комнаты
 class CreatorLabyrinth {
     
     var rooms: [Room] = []
@@ -16,33 +16,16 @@ class CreatorLabyrinth {
         
         print(numberOfRooms / 2)
         
-        guard numberOfRooms > 1 else {
-            return
-        }
+        guard numberOfRooms > 1 else { return }
         
         var count = 0
         
-        var length: Int {
-            return numberOfRooms / 2
-        }
+        var length: Int { return numberOfRooms / 2 }
+        var heigth: Int { return numberOfRooms - length }
+        var Xmax: Int { return heigth - 1 }
+        var Ymax: Int { return length - 1 }
         
-        var heigth: Int {
-            return numberOfRooms - length
-        }
-        
-        var Xmax: Int {
-            return heigth - 1
-        }
-        
-        var Ymax: Int {
-            return length - 1
-        }
-        
-        var Xlast: Int {
-            return 0
-        }
-        
-        print(Xmax, Ymax, Xlast, length, heigth)
+        print(Xmax, Ymax, length, heigth)
         
         for y in 0...Ymax {
             for x in 0...Xmax {
@@ -56,5 +39,17 @@ class CreatorLabyrinth {
             }
         }
         print("count", count)
+        
+        filling()
+    }
+    
+    ///Заполнение комнат предметами
+    func filling() {
+        
+        let chest = Chest()
+        let key = Key()
+        
+        rooms[Int.random(in: 1...numberOfRooms) - 1].things.append(chest)
+        rooms[Int.random(in: 1...numberOfRooms) - 1].things.append(key)
     }
 }

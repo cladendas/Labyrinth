@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct Key: Things {
+struct Key: Items {
     var name = "Key"
 }

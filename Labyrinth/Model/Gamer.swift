@@ -16,7 +16,7 @@ class Gamer {
     var health: Int = 0
     
     ///Инвентарь в рюкзаке игрока
-    var inventory = [Things]()
+    var inventory = [Items]()
     
     init(name: String = "adventurer", health: Int) {
         self.name = name
@@ -26,15 +26,15 @@ class Gamer {
     ///Кладёт в рюкзак выбранный объект
     ///
     /// - Parameter thing: Предмет, который необходимо положить в рюкзак
-    func take(thing: Things) {
-        inventory.append(thing)
+    func get(item: Items) {
+        inventory.append(item)
     }
     
     ///Удаляет из рюкзака выбранный объект
     ///
     /// - Parameter thing: Предмет, который необходимо удалить из рюкзака
-    func drop(thing: Things) {
-        inventory.removeAll(where: {$0.name == thing.name})
+    func drop(item: Items) {
+        inventory.removeAll(where: {$0.name == item.name})
     }
     
     ///Двигаться в выбранную сторону
