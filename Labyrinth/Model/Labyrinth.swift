@@ -11,4 +11,5 @@ import Foundation
 class Labyrinth {
     var rooms: [Room] = []
     var numberOfRooms: Int = 0
+    var startRoom: Room = Room()
 }

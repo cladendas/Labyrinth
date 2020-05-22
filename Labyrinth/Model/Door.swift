@@ -9,10 +9,10 @@
 import Foundation
 
 enum Directions: String {
-    case N
-    case S
-    case W
-    case E
+    case N = "N"
+    case S = "S"
+    case W = "W"
+    case E = "E"
 }
 
 struct Door {

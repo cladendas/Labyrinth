@@ -35,4 +35,8 @@ class Command {
             print(room.things)
         }
     }
+    
+    func commandsInRoom() {
+        
+    }
 }

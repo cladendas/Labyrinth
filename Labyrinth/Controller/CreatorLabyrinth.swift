@@ -8,9 +8,12 @@
 
 import Foundation
 ///!!! проработать, когда указано 1, 2, 3 комнаты
+///!!! проработать последнюю комнату
 class CreatorLabyrinth {
     
     var rooms: [Room] = []
+    var startRoom: Int = 0
+    var creatorRooms: CreatorRooms = CreatorRooms()
     
     func build(numberOfRooms: Int) {
         
@@ -28,6 +31,12 @@ class CreatorLabyrinth {
                 if count != numberOfRooms {
                     let room = Room()
                     room.coordinate = [x, y]
+                
+                    room.doors = creatorRooms.buildDoors(roomCoordinate: room.coordinate, maxX: Xmax, maxY: Ymax)
+                    room.doors.forEach { (door) in
+                        print(door.name.self)
+                    }
+                    
                     rooms.append(room)
                     count += 1
                     print(room.coordinate)
@@ -35,6 +44,8 @@ class CreatorLabyrinth {
             }
         }
         filling(numberOfRooms: numberOfRooms)
+        start(numberOfRooms: numberOfRooms)
+        
     }
     
     ///Заполнение комнат предметами
@@ -45,5 +56,10 @@ class CreatorLabyrinth {
         
         rooms[Int.random(in: 1...numberOfRooms) - 1].things.append(chest)
         rooms[Int.random(in: 1...numberOfRooms) - 1].things.append(key)
+    }
+    
+    ///Ииндекс стартовой комнаты
+    func start(numberOfRooms: Int) {
+        startRoom = Int.random(in: 1...numberOfRooms) - 1
     }
 }
