@@ -14,8 +14,6 @@ class CreatorLabyrinth {
     
     func build(numberOfRooms: Int) {
         
-        print(numberOfRooms / 2)
-        
         guard numberOfRooms > 1 else { return }
         
         var count = 0
@@ -24,8 +22,6 @@ class CreatorLabyrinth {
         var heigth: Int { return numberOfRooms - length }
         var Xmax: Int { return heigth - 1 }
         var Ymax: Int { return length - 1 }
-        
-        print(Xmax, Ymax, length, heigth)
         
         for y in 0...Ymax {
             for x in 0...Xmax {
@@ -38,13 +34,11 @@ class CreatorLabyrinth {
                 }
             }
         }
-        print("count", count)
-        
-        filling()
+        filling(numberOfRooms: numberOfRooms)
     }
     
     ///Заполнение комнат предметами
-    func filling() {
+    func filling(numberOfRooms: Int) {
         
         let chest = Chest()
         let key = Key()

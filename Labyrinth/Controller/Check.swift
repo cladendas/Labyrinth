@@ -16,7 +16,6 @@ class Check {
         
         if let tmpNumber = Int(number) {
             if tmpNumber > 0 {
-                print("Урааа!!!")
                 return tmpNumber
             }
         }
