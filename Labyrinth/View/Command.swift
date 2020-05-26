@@ -15,35 +15,55 @@ class Command {
     var welcome = "Welcome to Labyrinth!"
     var enterName = "Enter your name..."
     var enterNumberOfRooms = "! Enter numbers of rooms..."
+    var yourHealth = "Your health = "
     
     var check = Check()
     var creatorLabyrinth = CreatorLabyrinth()
     var interpreter = Interpreter()
+    
+    var gamer = Gamer(health: 0)
     
     ///Команды на старте игры
     func startCommands() {
         print(welcome)
         print(enterName)
 
-        let name = readLine()
-
-        print(check.checkName(name: name ?? ""), enterNumberOfRooms)
+        //ввод имени
+        let tmpName = readLine()
         
+        //проверка имени
+        let name = check.checkName(name: tmpName ?? "")
+        
+        print(name, enterNumberOfRooms)
+        
+        //ввод кол-ва комнат
         let tmpNumberOfRooms = readLine()
 
+        //проверка введенного числа
         let numberOfRooms = check.checkNumberOfRooms(number: tmpNumberOfRooms ?? "")
         
+        //создание игрока
+        gamer = CreatorGamer().creator(name: name, numberOfRooms: numberOfRooms)
+        
+        print(yourHealth, gamer.health)
+        
+        //создание лабиринта
         creatorLabyrinth.build(numberOfRooms: numberOfRooms)
         
         creatorLabyrinth.rooms.forEach { (room) in
             print(room.things)
         }
         
-        let stRoom = creatorLabyrinth.rooms[creatorLabyrinth.startRoom]
+        //получение стартовой комнаты
+        let stRoom = creatorLabyrinth.rooms[creatorLabyrinth.currentRoom]
         
-        description(of: stRoom)
-        
-        getComand(in: stRoom)
+        while true {
+            //описание комнаты
+            description(of: stRoom)
+            
+            //получение команд
+            getComand(in: stRoom)
+        }
     }
     
     ///Описание комнаты
@@ -51,20 +71,13 @@ class Command {
         print("You are in the room \(room.coordinate). There are \(room.doors.count) doors: \(room.doors). Items in the room: \(room.things)")
     }
     
+    ///Получение команды
     func getComand(in room: Room) {
         
         print("Enter command!")
         
-        let tt = readLine()
+        let command = readLine()
         
-        //переход в другую комнату
-        if room.doors.contains(where: { door -> Bool in door.name == tt }) {
-            print("выбрал дверь")
-        }
-        
-        //положить в рюкзак
-        if room.things.contains(where: { thing -> Bool in thing.name == tt }) {
-            print("поднял вещь")
-        }
+        interpreter.interpretationOf(command: command ?? "")
     }
 }

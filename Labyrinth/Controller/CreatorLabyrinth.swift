@@ -12,7 +12,7 @@ import Foundation
 class CreatorLabyrinth {
     
     var rooms: [Room] = []
-    var startRoom: Int = 0
+    var currentRoom: Int = 0
     var creatorRooms: CreatorRooms = CreatorRooms()
     
     func build(numberOfRooms: Int) {
@@ -26,8 +26,8 @@ class CreatorLabyrinth {
         var Xmax: Int { return heigth - 1 }
         var Ymax: Int { return length - 1 }
         
-        print("Xmax", Xmax)
-        print("Ymax", Ymax)
+//        print("Xmax", Xmax)
+//        print("Ymax", Ymax)
         
         for y in 0...Ymax {
             for x in 0...Xmax {
@@ -64,6 +64,6 @@ class CreatorLabyrinth {
     
     ///Ииндекс стартовой комнаты
     func start(numberOfRooms: Int) {
-        startRoom = Int.random(in: 1...numberOfRooms) - 1
+        currentRoom = Int.random(in: 1...numberOfRooms) - 1
     }
 }

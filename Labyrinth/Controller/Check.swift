@@ -23,6 +23,7 @@ class Check {
         return 0
     }
     
+    ///Если пользователь не введёт имя, то будет присвоено "adventurer"
     func checkName(name: String) -> String {
         let noName = "adventurer" //используется, если игрок не введёт имя
         
