@@ -16,5 +16,5 @@ enum Directions: String {
 }
 
 struct Door {
-    var name: Directions
+    var name: Directions.RawValue
 }

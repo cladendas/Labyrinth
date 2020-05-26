@@ -26,6 +26,9 @@ class CreatorLabyrinth {
         var Xmax: Int { return heigth - 1 }
         var Ymax: Int { return length - 1 }
         
+        print("Xmax", Xmax)
+        print("Ymax", Ymax)
+        
         for y in 0...Ymax {
             for x in 0...Xmax {
                 if count != numberOfRooms {
@@ -33,13 +36,13 @@ class CreatorLabyrinth {
                     room.coordinate = [x, y]
                 
                     room.doors = creatorRooms.buildDoors(roomCoordinate: room.coordinate, maxX: Xmax, maxY: Ymax)
-                    room.doors.forEach { (door) in
-                        print(door.name.self)
-                    }
+//                    room.doors.forEach { (door) in
+//                        print(door.name.self)
+//                    }
                     
                     rooms.append(room)
                     count += 1
-                    print(room.coordinate)
+//                    print(room.coordinate)
                 }
             }
         }
@@ -49,6 +52,7 @@ class CreatorLabyrinth {
     }
     
     ///Заполнение комнат предметами
+    /// - Parameters numberOfRooms: Кол-во комнат. Будет использовано, чтобы расположить предметы по комнатам в массиве комнат по случайному индексу
     func filling(numberOfRooms: Int) {
         
         let chest = Chest()
