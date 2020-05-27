@@ -13,18 +13,13 @@ class Interpreter {
     var room = Room()
     var gamer = Gamer(health: 0)
     var rooms: [Room] = []
-    var startRoom = Room()
     let creatorGamer = CreatorGamer()
     var creatorLabyrinth = CreatorLabyrinth()
     
     func creatorGamer(name: String, numberOfRooms: Int) {
         gamer = creatorGamer.creator(name: name, numberOfRooms: numberOfRooms)
     }
-    
-    func initializationRoom() {
-        
-    }
-    
+
     func createLabyrinth(numberOfRooms: Int) {
         creatorLabyrinth.build(numberOfRooms: numberOfRooms)
         rooms = creatorLabyrinth.rooms
@@ -34,8 +29,7 @@ class Interpreter {
     func interpretationOf(command: String) {
         //переход в другую комнату
         if room.doors.contains(where: { door -> Bool in door.name == command }) {
-            print("выбрал дверь")
-            
+            print("дверь")
             move(to: command)
         }
 
@@ -44,7 +38,7 @@ class Interpreter {
             if thing.name == command {
                 room.things.remove(at: index)
                 room.things.append(thing)
-                print("Положил в рюкзак")
+                print("положил в рюкзак")
             }
         }
           
@@ -65,9 +59,37 @@ class Interpreter {
                 thing.name == tmpCommand
             }
         }
+        //перейти в комнату
+        move(to: command)
     }
-    
+
+    //смена комнаты
     func move(to: String) {
-        
+        for room in rooms {
+            //на восток
+            if room.coordinate[0] == self.room.coordinate[0] + 1 && room.coordinate[1] == self.room.coordinate[1] && to == "E" {
+                self.room = room
+                print("выбрал восток")
+                break
+            }
+            //на запад
+            if room.coordinate[0] == self.room.coordinate[0] - 1 && room.coordinate[1] == self.room.coordinate[1] && to == "W" {
+                self.room = room
+                print("выбрал запад")
+                break
+            }
+            //на север
+            if room.coordinate[0] == self.room.coordinate[0] && room.coordinate[1] == self.room.coordinate[1] + 1 && to == "N" {
+                self.room = room
+                print("выбрал север")
+                break
+            }
+            //на юг
+            if room.coordinate[0] == self.room.coordinate[0] && room.coordinate[1] == self.room.coordinate[1] - 1 && to == "S" {
+                self.room = room
+                print("выбрал юг")
+                break
+            }
+        }
     }
 }

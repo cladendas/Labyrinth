@@ -15,7 +15,7 @@ class CreatorRooms {
         var doors: [Door] = []
         
         if (roomCoordinate.first! + 1) <= maxX {
-            doors.append(Door(name: "N"))
+            doors.append(Door(name: "E"))
         }
         if (roomCoordinate.last! + 1) <= maxY {
             doors.append(Door(name: "N"))

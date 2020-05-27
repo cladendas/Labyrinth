@@ -8,13 +8,6 @@
 
 import Foundation
 
-enum Directions: String {
-    case N = "N"
-    case S = "S"
-    case W = "W"
-    case E = "E"
-}
-
 struct Door {
     var name: Directions.RawValue
 }

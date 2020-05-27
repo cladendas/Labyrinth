@@ -20,7 +20,6 @@ class Command {
     var check = Check()
     var interpreter = Interpreter()
     
-    
     ///Команды на старте игры
     func startCommands() {
         print(welcome)
