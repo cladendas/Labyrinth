@@ -18,10 +18,8 @@ class Command {
     var yourHealth = "Your health = "
     
     var check = Check()
-    var creatorLabyrinth = CreatorLabyrinth()
     var interpreter = Interpreter()
     
-    var gamer = Gamer(health: 0)
     
     ///Команды на старте игры
     func startCommands() {
@@ -43,26 +41,19 @@ class Command {
         let numberOfRooms = check.checkNumberOfRooms(number: tmpNumberOfRooms ?? "")
         
         //создание игрока
-        gamer = CreatorGamer().creator(name: name, numberOfRooms: numberOfRooms)
+        interpreter.creatorGamer(name: name, numberOfRooms: numberOfRooms)
         
-        print(yourHealth, gamer.health)
+        print(yourHealth, interpreter.gamer.health)
         
         //создание лабиринта
-        creatorLabyrinth.build(numberOfRooms: numberOfRooms)
-        
-        creatorLabyrinth.rooms.forEach { (room) in
-            print(room.things)
-        }
-        
-        //получение стартовой комнаты
-        let stRoom = creatorLabyrinth.rooms[creatorLabyrinth.currentRoom]
+        interpreter.createLabyrinth(numberOfRooms: numberOfRooms)
         
         while true {
             //описание комнаты
-            description(of: stRoom)
+            description(of: interpreter.room)
             
             //получение команд
-            getComand(in: stRoom)
+            getComand(in: interpreter.room)
         }
     }
     
